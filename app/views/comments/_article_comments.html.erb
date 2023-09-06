@@ -4,6 +4,13 @@
 <div class="col-lg-12 col-xl-12 col-xxl-12 col-md-12 btn btn-light text-right justify-content-md-end d-md-flex" id="editar">
 <%= button_to "X", comment, method: :delete %>
 </div>
+<div class="d-inline">
+        <% if comment.user.present? %>
+        <%= (comment.user.name) %>
+        <% else %>
+        <%= 'Anonimo' %>
+        <% end %>
+</div>
 <div class="textcomment">
 <%= comment.content %>
 </div>
